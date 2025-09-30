@@ -11,15 +11,37 @@ When astronauts explore space, particularly Mars, fine dust particles build up o
 
 This project proposes a smart surface coating that can shed the dust using resonance.
 
-The rover surface will be covered in thin films (piezoelectric layers (PVDF or PZT) embedded in Kapton/Aluminum sheets).
+The rover surface will be covered in thin films (piezoelectric layers PDMS embedded in Aluminum Fiber sheets).
 
-Dust integrity will be monitored using sensors (optical backscatter + capacitive).
+Dust integrity will be monitored using sensors (High-resolution CMOS scientific camera).
 
-AI will be used to process the sensor data and determine when the dust has exceeded a defined threshold.
+Once the sensor (CREMA) detects that dust accumulation has crossed the threshold, an alert signal is sent to the resonant system, which then gets triggered to generate vibrations, causing the dust particles to fall off
 
-Once the threshold has been met, the piezoelectric films will generate resonant vibrations to shake off the dust particles that had been accumulated on the surface without damaging the surface of the rover.
+**Self-Directed Visual Observation through Deep Neural Networks**
 
-The process mimics the behavior of a snake shedding its skin. Instead of peeling, the material uses a controlled resonance to automatically clean itself.
+A ResNet18 CNN backbone employing deep residual learning architecture for autonomous visual perception.
+
+An end-to-end feature abstraction (raw edges,pixels → textures → semantic cues of dust).
+
+Transforms raw pixel information into latent representations for a perception system that classifies clean vs. dust regardless of increasing noise due to the environment and light.
+
+This sizes works in varying light and environmental noise without adaptations and handcrafted methods.
+
+
+**Smart Decision-Making Using Probabilistic Thresholding**
+
+
+Produces a probabilistic dust score (0-1) as opposed to a standard yes/no value.
+
+Uses thresholding (e.g., 0.7) when providing alerts based on context. 
+
+Prevents false alerts by taking confidence levels into account.  
+
+Minimizes redundant cleaning cycles and energy consumption. 
+
+Ensures surface reliability of rovers operations in extreme extraterrestrial environments.
+
+
 
 
 **Materials Used**
@@ -30,7 +52,7 @@ Functional Layer: PVDF or PZT (Piezoelectric films for resonance).
 
 Reinforcement: Graphene/nanotube thin coating (for strength & dust repellance).
 
-Sensors: Optical dust detection + capacitive layer sensing.
+Sensors:High-resolution CMOS scientific camera .
 
 
 **Process Flow**
